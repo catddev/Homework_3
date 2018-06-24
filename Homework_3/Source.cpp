@@ -1,4 +1,4 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
 #include<math.h>
@@ -11,7 +11,6 @@ void main()
 	setlocale(LC_ALL, "Rus");
 
 	int tn = 0;
-
 start:
 
 	printf("task number:\t");
@@ -97,9 +96,9 @@ start:
 			c = c + b;
 			b = b / 10;
 		}
-		if (pow(c, 3) == a*a) cout << "êóá ñóììû öèôð ýòîãî ÷èñëà ðàâåí êâàäðàòó ñàìîãî ÷èñëà" << endl;
+		if (pow(c, 3) == a*a) cout << "ÐºÑƒÐ± ÑÑƒÐ¼Ð¼Ñ‹ Ñ†Ð¸Ñ„Ñ€ ÑÑ‚Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° Ñ€Ð°Ð²ÐµÐ½ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ñƒ ÑÐ°Ð¼Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°" << endl;
 
-		else cout << "êóá ñóììû öèôð ýòîãî ÷èñëà ÍÅ ðàâåí êâàäðàòó ñàìîãî ÷èñëà" << endl;
+		else cout << "ÐºÑƒÐ± ÑÑƒÐ¼Ð¼Ñ‹ Ñ†Ð¸Ñ„Ñ€ ÑÑ‚Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð° ÐÐ• Ñ€Ð°Ð²ÐµÐ½ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ñƒ ÑÐ°Ð¼Ð¾Ð³Ð¾ Ñ‡Ð¸ÑÐ»Ð°" << endl;
 	}
 	break;
 	case 6:
