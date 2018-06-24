@@ -2,20 +2,13 @@
 #include<stdlib.h>
 #include<locale.h>
 #include<math.h>
-#include<time.h>
-#include <Windows.h>
 #include <iostream>
 
 using namespace std;
 
 void main()
 {
-	srand(time(NULL));
-
 	setlocale(LC_ALL, "Rus");
-
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, 15);
 
 	int tn = 0;
 
