@@ -97,11 +97,12 @@ start:
 		int a, b, c=0;
 		cout << "enter a number" << endl;
 		cin >> a;
-		while (a > 0)
+		b = a;
+		while (b > 0)
 		{
-			b = a % 10;
-			a = a / 10;
+			b = b % 10;
 			c = c + b;
+			b = b / 10;
 		}
 		if (pow(c, 3) == a*a) cout << "куб суммы цифр этого числа равен квадрату самого числа" << endl;
 
