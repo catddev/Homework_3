@@ -20,7 +20,7 @@ start:
 	{
 	case 1:
 	{
-		int quant=0;
+		int quant = 0;
 		for (int i = 100; i < 1000; i++)
 		{
 			int a = 0, b = 0, c = 0;
@@ -127,6 +127,92 @@ start:
 				cout << i << " ";
 		}
 		cout << endl << endl;
+	}
+	break;
+	case 8: // НАПИСАТЬ СИМУЛЯТОР ИГРЫ БЛЭК-ДЖЕК 
+	{
+		int n = 0, m = 0;
+
+		bool stop = false;
+		while (!stop)
+		{
+			int player = 0;
+			int computer = 0;
+
+			int x = 2 + rand() % 10;
+			int y = 2 + rand() % 10;
+			cout << x << " " << y << endl;
+			x = x + y;
+			player = player + x;
+			cout << "you have: " << player << endl;
+
+			int a = 2 + rand() % 10;
+			int b = 2 + rand() % 10;
+			a = a + b;
+			computer = computer + a;
+
+			bool enough = false;
+			bool myturn = false;
+
+			while (!enough)
+			{
+				if (player < 22)
+				{
+					cout << "more cards? 1 - yes, 2 - no" << endl;
+					cin >> n;
+					if (n == 1)
+					{
+						int card = 2 + rand() % 10;
+						player = player + card;
+						cout << "your card " << card << " newTOTAL: " << player << endl;
+					}
+					else if (n == 2)
+					{
+						cout << "computer has " << computer << endl;
+						enough = true;
+					}
+				}
+				else if (player > 21)
+				{
+					cout << "you lost!" << endl;
+					enough = true;
+					myturn = true;
+				}
+			}
+
+			while (!myturn)
+			{
+				if (computer > 21)
+				{
+					cout << "computer lost!" << endl;
+					myturn = true;
+				}
+
+				if (computer > player && computer <= 21)
+				{
+					cout << "you lost! computerTOTAL: " << computer << endl;
+					myturn = true;
+				}
+				else if (computer < player && player <= 21)
+				{
+					int newcard = 2 + rand() % 10;
+					computer = computer + newcard;
+					cout << "computer takes one more card " << newcard << endl;
+					cout << "computerTOTAL: " << computer << endl;
+				}
+				else if (computer == player)
+				{
+					cout << "DRAW: " << computer << "= " << player << endl;
+					myturn = true;
+				}
+			}
+
+			cout << "wanna play more? 1 - yes, 2 - no" << endl;
+			cin >> m;
+			if (m == 1) stop = false;
+			else if (m == 2) stop = true;
+		}
+
 	}
 	break;
 	default:
